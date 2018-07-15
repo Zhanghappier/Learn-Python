@@ -1,16 +1,48 @@
 Chapter 2  Variables, expressions and statements
 One of the most powerful features of a programming language is the ability to manipulate variables. 🌟
 A variable is a name that refers to a value.🌟
-
-
-
-
-
-
-
-
-
-
+  2.1  Assignment statements
+An assignment statement creates a new variable and gives it a value: 🌟
+>>> message = 'And now for something completely different'
+>>> n = 17
+>>> pi = 3.141592653589793
+This example makes three assignments. 
+The first assigns a string to a new variable named message; the second gives the integer 17 to n; the third assigns the (approximate) value of π to pi.
+A common way to represent variables on paper is to write the name with an arrow pointing to its value. 🌟
+This kind of figure is called a state diagram because it shows what state each of the variables is in (think of it as the variable’s state of mind). 🌟
+Figure 2.1 shows the result of the previous example.
+n ➡️ 17
+  2.2  Variable names
+Programmers generally choose names for their variables that are meaningful—they document what the variable is used for.🌟
+Variable names can be as long as you like.
+They can contain both letters and numbers, but they can’t begin with a number. 🌟
+It is legal to use uppercase letters, but it is conventional to use only lower case for variables names.🌟
+The underscore character, _, can appear in a name. 🌟
+It is often used in names with multiple words, such as your_name or airspeed_of_unladen_swallow.
+If you give a variable an illegal name, you get a syntax error:
+>>> 76trombones = 'big parade'
+SyntaxError: invalid syntax
+>>> more@ = 1000000
+SyntaxError: invalid syntax
+>>> class = 'Advanced Theoretical Zymurgy'
+SyntaxError: invalid syntax
+76trombones is illegal because it begins with a number. 
+more@ is illegal because it contains an illegal character, @. 
+But what’s wrong with class?
+It turns out that class is one of Python’s keywords.🌟
+The interpreter uses keywords to recognize the structure of the program, and they cannot be used as variable names.
+Python 3 has these keywords:🌟
+False      class      finally    is         return
+None       continue   for        lambda     try
+True       def        from       nonlocal   while
+and        del        global     not        with
+as         elif       if         or         yield
+assert     else       import     pass
+break      except     in         raise
+You don’t have to memorize this list. 
+In most development environments, keywords are displayed in a different color; if you try to use one as a variable name, you’ll know.
+  2.3  Expressions and statements
+An expression is a combination of values, variables, and operators.🌟
 
 
 
